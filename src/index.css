@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@layer base {
+    @font-face {
+      font-family: 'Jost';
+      font-weight: 400;
+      src: url();
+    }
+}
