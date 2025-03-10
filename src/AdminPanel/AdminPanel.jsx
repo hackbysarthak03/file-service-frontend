@@ -17,9 +17,8 @@ const AdminPanel = () => {
   
   // Admin user details
   const admin = {
-    name: "Jane Doe",
-    role: "System Administrator",
-    avatar: "/api/placeholder/40/40"
+    name: "Admin",
+    role: "DRDO Administrator",
   };
 
   
@@ -231,9 +230,6 @@ const AdminPanel = () => {
         {/* Logo Section */}
         <div className="p-4 border-b border-gray-700">
           <div className={`flex items-center ${sidebarCollapsed ? 'justify-center' : 'justify-center'}`}>
-            <svg className="h-10 w-10 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-            </svg>
             {!sidebarCollapsed && <span className="ml-2 text-xl font-bold">DRDO :: Admin</span>}
           </div>
         </div>
@@ -266,7 +262,6 @@ const AdminPanel = () => {
         {!sidebarCollapsed && (
           <div className="p-4 border-t border-gray-700">
             <div className="flex items-center">
-              <img src={admin.avatar} alt="Admin Avatar" className="h-10 w-10 rounded-full" />
               <div className="ml-3">
                 <p className="text-sm font-medium">{admin.name}</p>
                 <p className="text-xs text-gray-400">{admin.role}</p>
@@ -284,13 +279,6 @@ const AdminPanel = () => {
         {/* Minimized Admin Avatar - Only show when collapsed */}
         {sidebarCollapsed && (
           <div className="p-4 border-t border-gray-700 flex justify-center">
-            <img 
-              src={admin.avatar} 
-              alt="Admin Avatar" 
-              className="h-10 w-10 rounded-full cursor-pointer" 
-              onClick={() => setSidebarCollapsed(false)}
-              title={admin.name}
-            />
           </div>
         )}
       </div>
